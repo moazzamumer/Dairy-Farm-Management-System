@@ -1,6 +1,6 @@
-## Project-DFMS
+# Project-DFMS
 
-# The Dairy Farm Management System is a comprehensive web-based application designed to streamline and automate various operations involved in managing a dairy farm. This project aims to provide a user-friendly interface for farmers and farm managers to efficiently manage their daily milk production, financial records, sales, employee management, and other farm-related activities.
+The Dairy Farm Management System is a comprehensive web-based application designed to streamline and automate various operations involved in managing a dairy farm. This project aims to provide a user-friendly interface for farmers and farm managers to efficiently manage their daily milk production, financial records, sales, employee management, and other farm-related activities.
 
 Key Features:
 
@@ -20,7 +20,7 @@ Key Features:
 
 8. User-Friendly Interface: Provide a clean and intuitive user interface for easy navigation and interaction with the system. Ensure responsiveness to support access from different devices and screen sizes.
 
-This Dairy Farm Management System is built using the Python Flask framework for the backend, HTML/CSS for the frontend, and a SQL database (such as MySQL or SQLite) to store and retrieve data. The application leverages the power of web technologies to offer a centralized and efficient solution for dairy farm management.
+This Dairy Farm Management System is built using the Python Flask framework for the backend, HTML/CSS for the frontend, and a SQL database (MS SQL SERVER) to store and retrieve data. The application leverages the power of web technologies to offer a centralized and efficient solution for dairy farm management.
 
 Whether you are a small-scale dairy farmer or managing a large commercial dairy farm, this Dairy Farm Management System can help you streamline your operations, improve productivity, and make informed decisions based on accurate and up-to-date data.
 
