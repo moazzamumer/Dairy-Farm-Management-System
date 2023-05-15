@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milk Production</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='m_view.css') }}">
+    <style>
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            border: 2px solid #0c0c0c; /* Add an outline border */
+            
+        }
+
+        .chart-container img {
+            max-width: 100%;
+            max-height: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+<div class="banner">
+    <!-- Add your navbar and other elements here -->
+    <div class="navbar">
+        <div class="logo"><span class="LG">Dairy</span><i class="fa-solid fa-cow" style="color:antiquewhite"></i> <span>Farm</span></div>
+        <ul>
+            <li><a href="/milk_production_view_m">Milk Production</a></li>
+            <li><a href="/income_view_m"">Finance Records</a></li>
+            <li><a href="/sales_view_m"><b>Sales</b></a></li>
+            <li><a href="/m_view">Manage Employees</a></li>
+            <li><a href="/others">Others</a></li>
+            <li class="logout-btn"><a href="/logout_manager">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="navbar">
+        <ul>
+            <li><a href="/sales_view_m">Sales Reocrds</a></li>
+            <li><a href="/sales_stats"><b>Sales Statistics</b></a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        
+
+        <div class="chart-container">
+            <img src="{{ url_for('static', filename=sales_filename) }}" alt="Milk Production Stats">
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='products.css') }}">
+    <title>VILLAGE MILK</title>
+</head>
+
+<body>
+    <section class="product"> 
+        
+        <h2 class="product-category">PRODUCTS</h2>
+        <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">20% off</span>
+                    <img src="/static/images/butter.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Butter</h2>
+                    <p class="product-short-description">Fresh & Natural..</p>
+                    <span class="price">RS. 40/-</span><span class="actual-price">RS. 50/-</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">20% off</span>
+                    <img src="/static/images/milk.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Milk</h2>
+                    <p class="product-short-description">Fresh & Natural..</p>
+                    <span class="price">RS. 40/-</span><span class="actual-price">RS. 50/-</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">20% off</span>
+                    <img src="/static/images/cheese.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Cheese</h2>
+                    <p class="product-short-description">Fresh & Natural...</p>
+                    <span class="price">RS. 40/-</span><span class="actual-price">$50</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">20% off</span>
+                    <img src="/static/images/dahi.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Yougurt</h2>
+                    <p class="product-short-description">Fresh & Natural..</p>
+                    <span class="price">RS. 40/-</span><span class="actual-price">RS. 50/-</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>

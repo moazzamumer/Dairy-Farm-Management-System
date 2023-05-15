@@ -1,0 +1,109 @@
+.logout-btn {
+  background-color: #b40000; /* Specify the background color */
+  border-radius: 20px; /* Set the border radius to create an oval shape */
+  padding: 8px 16px; /* Add padding for spacing */
+}
+
+.logout-btn a {
+  color: white; /* Set the text color */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* .logo {
+    width: 500px;
+    cursor: pointer;
+  } */
+  .navbar .logo{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .navbar .logo .LG{
+    font-size: 2.5rem;
+    color: blue;
+  }
+  Span{
+    color:rgb(243, 7, 7);
+  }
+  .navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #190063;
+    text-transform: uppercase;
+  }
+  
+  .navbar ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  
+  .navbar ul li:hover::after {
+    width: 100%;
+  }
+  
+  .content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #a80000f4;
+  }
+  
+  .content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+  }
+  
+  .content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+  }
+
+   
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/signup.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.btn{
+    float: right;
+    margin-top: 0%;
+    border: none;
+    border-radius: 2rem;
+    padding: 2%;
+    background: #b40000;
+    color: #ffffff;
+    font-weight: 600;
+    width: 25%;
+    cursor: pointer;
+}
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='m_view.css') }}">
+    </head>
+
+    <style>
+    .btn{
+    float: right;
+    margin-top: 0%;
+    border: none;
+    border-radius: 2rem;
+    padding: 2%;
+    background: #b40000;
+    color: #ffffff;
+    font-weight: 600;
+    width: 17%;
+    cursor: pointer;
+}
+    </style>
+<body>
+
+    <div class="banner">
+        <div class="navbar">
+            <div class="logo"><span class="LG">Dairy</span><i class="fa-solid fa-cow" style="color:antiquewhite"></i> <span>Farm</span></div>
+            <ul>
+                <li><a href="/e_view"><b>Milk Record</b></a></li>
+                <li><a href="/animals">Animals Record</a></li>
+                <li><a href="/health">Animals Health</a></li>
+                <li><a href="/sales">Sales</a></li>
+                <li><a href="/product_info">Products</a></li>
+                <li><a href="/finance">Farm Finance</a></li>
+                <li><a href="/edit_profile_e/{{session['username']}}/{{session['password']}}">Edit Profile</a></li>
+                <li class="logout-btn"><a href="/logout_employee">Logout</a></li>
+
+                <!-- <li><a href="#">About Us</a></li> -->
+            </ul>
+        </div>
+
+
+        <div class="container register">
+            <br>
+            <h2>Edit Milk Production Entry</h2>
+            <br>
+          <div class="row">
+            
+              <div class="col-md-7 register-right">
+                  <form  action="/edit_milk_production/{{ milk_entry.Production_Date }}/{{ milk_entry.A_ID }}" method="post" class="was-validated">
+                        <div>
+                            <div class="col-md-12 mb-3">
+                                <label for="productionDate"><b>Production Date</b></label>
+                                <input type="text" class="form-control" id="productionDate" name="productionDate" value="{{ milk_entry.Production_Date }}" readonly>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="animalID"><b>Animal ID</b></label>
+                                <input type="text" class="form-control" id="animalID" name="animalID" value="{{ milk_entry.A_ID }}" readonly>
+                            </div>
+                              <div class="col-md-12 mb-3">
+                                <label for="quantity"><b>Quantity (KG)</b></label>
+                                <input type="number" class="form-control" id="quantity" name="quantity" value="{{ milk_entry.Quantity }}" required>
+                              </div>
+                              <div class="col-md-12 mb-3">
+                                <label for="quality"><b>Quality</b></label>
+                                <input type="text" class="form-control" id="quality" name="quality" value="{{ milk_entry.Quality }}" required>
+                              </div>
+                        </div>
+                        <br>
+                            <div>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-outline-primary ml-2" type="submit" name="submit">
+                                        <span class="cover"></span>Update
+                                    </button>
+                                    <div style="width: 30px;"></div>
+                                    <button class="btn btn-outline-primary" type="button" onclick="history.back()">
+                                        <span class="cover"></span>Back
+                                    </button>
+                                
+                                </div>
+                            </div>
+                        </form>                      
+                </div>
+              
+              </div>
+            </div>
+        </div>    
+
+
+
+    <!-- <div class="container">
+        <h2>Edit Milk Production Entry</h2>
+        <form action="/edit_milk_production/{{ milk_entry.Production_Date }}/{{ milk_entry.A_ID }}" method="post" >
+            <div class="form-group">
+                <label for="quantity">Quantity (KG):</label>
+                <input type="number" class="form-control" id="quantity" name="quantity" value="{{ milk_entry.Quantity }}" required>
+            </div>
+            <div class="form-group">
+                <label for="quality">Quality:</label>
+                <input type="text" class="form-control" id="quality" name="quality" value="{{ milk_entry.Quality }}" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div> -->
+</body>
+</html>

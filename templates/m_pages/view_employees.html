@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milk Production</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='m_view.css') }}">
+</head>
+<style>
+.scrollable-box {
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin-top: 20px;
+  max-height: 400px; /* Set a max height for scrollability */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 2px solid #0c0c0c; /* Add an outline border */
+  border-radius: 5px; /* Add rounded corners */
+}
+.scrollable-box table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.scrollable-box th, .scrollable-box td {
+  padding: 10px;
+  text-align: center;
+}
+.scrollable-box tr:nth-child(even) {
+  background-color: #f2f2f2; /* Add alternating row background color */
+}
+.scrollable-box tr:hover {
+  background-color: #e6e6e6; /* Add hover row background color */
+}
+.button-separator {
+    border-left: 1px solid #000000;
+    margin: 0 5px;
+}
+</style>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <div class="logo"><span class="LG">Dairy</span><i class="fa-solid fa-cow" style="color:antiquewhite"></i> <span>Farm</span></div>
+            <ul>
+                <li><a href="/milk_production_view_m">Milk Production</a></li>
+                <li><a href="/income_view_m"">Finance Records</a></li>
+                <li><a href="/sales_view_m">Sales</a></li>
+                <li><a href="/m_view"><b>Manage Employees</b></a></li>
+                <li><a href="/others">Others</a></li>
+                <li class="logout-btn"><a href="/logout_manager">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class ="navbar">
+            <ul>
+                <li><a href="/m_view">Add Employee</a></li>
+                <li><a href="/view_employees"><b>View Employees</b></a></li><br>
+                
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="header">
+                <h2>Employees List</h2>
+                <!-- <p>Instructions: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non posuere purus.</p> -->
+            </div>
+
+            <div class="scrollable-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                            <th>Contact</th>
+                            <th>Salary (Rs)</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>Actions</th>
+                            <!-- Add more table headers if needed -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in employees_data %}
+                        <tr>
+                            <td>{{ row.E_ID }}</td>
+                            <td>{{ row.E_Name }}</td>
+                            <td>{{ row.Gender }}</td>
+                            <td>{{ row.Contact }}</td>
+                            <td>{{ row.Salary }}</td>
+                            <td>{{ row.Login_username }}</td>
+                            <td>{{ row.Login_password }}</td>
+                            <td>
+                                <a href="/edit_employee_m/{{ row.E_ID }}/{{ row.M_ID }}" class="edit-btn">Edit</a>
+                                <span class="button-separator"></span>
+                                <a href="/delete_employee/{{ row.E_ID }}/{{ row.M_ID }}" class="delete-btn">Delete</a>
+                            </td>
+                            <!-- Display other row data as needed -->
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
