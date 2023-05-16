@@ -280,10 +280,40 @@ def delete_e(eID, mID):
     return delete_employee(eID, mID)
 
 ########################
-@app.route('/search_milk_data', methods=['GET','POST'])
-def search_1():
-    return search_milk_data()
+# ROUTES FOR SEARCH TABS IN VIEWS
+# THESE ROUTES ARE USING SEARCH.PY FILE
 
+@app.route('/search_milk_data_m', methods=['GET','POST'])
+def search_1():
+    return search_milk_data_m()
+
+@app.route('/search_milk_data_e', methods=['GET','POST'])
+def search_1_e():
+    return search_milk_data_e()
+
+@app.route('/search_revenue_record_m', methods=['GET','POST'])
+def search_2():
+    return search_revenue_record_m()
+
+@app.route('/search_sales_m', methods=['GET','POST'])
+def search_3():
+    return search_sales_m()
+
+@app.route('/search_sales_e', methods=['GET','POST'])
+def search_3_e():
+    return search_sales_e()
+
+@app.route('/search_employee_m', methods=['GET','POST'])
+def search_4():
+    return search_employee_m()
+
+@app.route('/search_animal', methods=['GET','POST'])
+def search_5():
+    return search_animals()
+
+@app.route('/search_health', methods=['GET','POST'])
+def search_6():
+    return search_health()
 
 if __name__ == '__main__':
     app.run(debug=True)

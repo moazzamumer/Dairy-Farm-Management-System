@@ -45,7 +45,7 @@ def milk_production_stats():
     # Update function for the animation
     def update_chart(frame):
         ax.clear()
-        ax.bar(production_dates[:frame+1], quantities[:frame+1],color='brown')
+        ax.bar(production_dates[:frame+1], quantities[:frame+1],color='blue')
         ax.set_xlabel('Production Date')
         ax.set_ylabel('Quantity (KG)')
         ax.set_title('Milk Production Stats')
@@ -166,7 +166,7 @@ def sales_stats():
     def update_chart(frame):
         #nonlocal animation_running
         ax.clear()
-        ax.bar(product_ids[:frame+1], sales_count[:frame+1],color='brown')
+        ax.bar(product_ids[:frame+1], sales_count[:frame+1],color='blue')
         ax.set_xlabel('Product ID')
         ax.set_ylabel('Sales Count')
         ax.set_title('Count of Sales by Product')
