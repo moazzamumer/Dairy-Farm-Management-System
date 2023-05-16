@@ -279,6 +279,7 @@ def delete_5(pID, mID):
 def delete_e(eID, mID):
     return delete_employee(eID, mID)
 
+
 ########################
 # ROUTES FOR SEARCH TABS IN VIEWS
 # THESE ROUTES ARE USING SEARCH.PY FILE
